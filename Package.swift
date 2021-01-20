@@ -1,11 +1,6 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let targets: [Target] = [
-    .target(name: "ZIPFoundation"),
-    .testTarget(name: "ZIPFoundationTests", dependencies: ["ZIPFoundation"])
-]
-
 let package = Package(
     name: "ZIPFoundation",
     platforms: [
@@ -14,5 +9,8 @@ let package = Package(
     products: [
         .library(name: "ZIPFoundation", targets: ["ZIPFoundation"])
     ],
-    targets: targets
+    targets: [
+        .target(name: "ZIPFoundation"),
+        .testTarget(name: "ZIPFoundationTests", dependencies: ["ZIPFoundation"])
+    ]
 )
